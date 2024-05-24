@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <section class="showcase active">
+    <section class="showcase">
       <header>
         <h1 class="logo">Gs04_TravelMap</h1>
+        <div class="language-choice">
+          <p id="Japanese">Japanese</p>
+          <p id="English">English</p>
+        </div>
         <div class="toggle"></div>
       </header>
 
@@ -17,23 +21,43 @@
 
       <div class="overlay"></div>
 
-      <div class="text">
-        <h2>Travel Map</h2>
-        <h3>Explorer Something New</h3>
+      <div class="showcase-left">
+        <div class="text">
+          <h2>Travel Map</h2>
+          <h3>Explorer Something New</h3>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nam
-          mollitia quo alias dolor velit.
-        </p>
+          <!-- <p class="Japanese showthis">
+            未知の世界を探索し、心に残る素敵な思い出を作りましょう。いつもの日常を飛び出して、一生に一度の冒険に出かけませんか。あなたの旅はここから始まります。
+          </p> -->
 
-        <div class="place-input">
-          <input
-            id="place"
-            type="text"
-            placeholder="where did you visit?"
-            autocomplete="off"
-          />
-          <button id="submitbtn" type="submit">Submit</button>
+          <p class="English typing">
+            Discover the world’s hidden gems and create unforgettable memories.
+            Travel beyond the ordinary and embark on an adventure of a lifetime.
+            <br />Your journey starts here...
+          </p>
+
+          <div class="place-input">
+            <input
+              id="input"
+              type="text"
+              placeholder="where did you visit?"
+              autocomplete="off"
+            />
+            <button id="submit" type="submit">Add to your list</button>
+          </div>
+        </div>
+        <div class="showcase-right">
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6628.719649652799!2d-118.3333824235167!3d33.82883002949289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd4ac5b05aed91%3A0xc28f99ac4887e757!2s2571%20Plaza%20del%20Amo%2C%20Torrance%2C%20CA%2090503!5e0!3m2!1sja!2sus!4v1716278641609!5m2!1sja!2sus"
+              width="420"
+              height="280"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
 
@@ -59,5 +83,19 @@
         <li><a href="#">Contact</a></li>
       </ul>
     </div>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/myjs.js"></script>
+    <script>
+      const menuToggle = document.querySelector(".toggle");
+      const showcase = document.querySelector(".showcase");
+
+      menuToggle.addEventListener("click", function () {
+        /* activeにする */
+        menuToggle.classList.toggle("active");
+        showcase.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>

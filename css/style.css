@@ -9,6 +9,8 @@
 }
 
 .showcase {
+  position: absolute;
+  right: 0;
   width: 100%;
   height: 100vh;
   background-color: #111;
@@ -17,6 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: 0.5s;
 }
 
 .showcase.active {
@@ -26,6 +29,16 @@
 
 .toggle {
   background: url("../img/menu.png");
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: url("../img/close.png");
   width: 60px;
   height: 60px;
   background-repeat: no-repeat;
@@ -46,6 +59,12 @@
   z-index: 1000;
 }
 
+.language-choise {
+  position: absolute; /* Flexを解除 */
+  top: 0;
+  right: 300;
+}
+
 /* 一度見えないようにする */
 .menu {
   position: absolute;
@@ -64,13 +83,13 @@
   font-size: 24px;
   color: #111;
   transition: 0.5s ease;
-  width: 300px;
+  width: 250px;
   margin-left: 50px;
 }
 
 .menu li:hover {
-  text-decoration: underline;
-  letter-spacing: 5px;
+  /* text-decoration: underline; */
+  letter-spacing: 3px;
 }
 
 .menu ul a {
@@ -86,13 +105,16 @@
   object-fit: cover;
   opacity: 0.8;
 }
+.showcase-left {
+  z-index: 1000;
+}
 
 .text {
   z-index: 1000;
 }
 
 .text h2 {
-  font-size: 5em;
+  font-size: 3em;
   font-weight: 800;
   text-transform: uppercase;
   color: #fff;
@@ -110,7 +132,7 @@
   font-size: 1.1em;
   margin-top: 20px;
   color: #fff;
-  max-width: 700px;
+  max-width: 500px;
 }
 
 .text a {
@@ -122,8 +144,16 @@
   color: #111;
 }
 
+.textSplitLoad {
+  display: none;
+}
+
+.split {
+  visibility: hidden;
+}
+
 .place-input {
-  width: 100%;
+  width: 70%;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -134,26 +164,31 @@
 .text input {
   width: 100%;
   padding: 20px 30px;
-  border-radius: 15px;
+  border-radius: 20px;
   border: 1px solid #6e695f;
-  opacity: 0.8;
+  opacity: 0.7;
   font-size: 1.2em;
+  transition: 0.5s;
 }
 
 .text input:focus {
   outline: none;
 }
 
+.text input:hover {
+  opacity: 0.8;
+}
+
 .text button {
   margin-top: 10px;
-  width: 20%;
+  width: 60%;
   height: 30px;
   opacity: 0.8;
   background-color: #fff;
   border: none;
   font-size: 1em;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.2s;
   letter-spacing: 2px;
 }
 
@@ -169,7 +204,7 @@
   );
   opacity: 1;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);
-  letter-spacing: 2px;
+  letter-spacing: 4px;
 }
 
 .text button:active {
@@ -204,7 +239,7 @@
 .social {
   margin-top: 20px;
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   display: flex;
   justify-content: center;
 }
@@ -218,4 +253,25 @@
 
 .social li:hover {
   transform: translateY(-10px);
+}
+
+@media (max-width: 798px) {
+  .showcase,
+  .showcase header {
+    padding: 40px;
+  }
+
+  .text h2 {
+    font-size: 3em;
+  }
+  .text h3 {
+    font-size: 2em;
+  }
+}
+
+.map {
+  filter: grayscale(0.1);
+  position: absolute;
+  top: 25%;
+  left: 50%;
 }
