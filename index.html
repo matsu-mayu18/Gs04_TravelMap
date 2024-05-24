@@ -1,45 +1,63 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gz04_TravelMap</title>
+    <title>Gs04_TravelMap</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div class="input-place">
-      <input id="place" type="text" placeholder="where did you visit?" />
-    </div>
-    <div class="map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6628.719649652799!2d-118.3333824235167!3d33.82883002949289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd4ac5b05aed91%3A0xc28f99ac4887e757!2s2571%20Plaza%20del%20Amo%2C%20Torrance%2C%20CA%2090503!5e0!3m2!1sja!2sus!4v1716278641609!5m2!1sja!2sus"
-        width="600"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </div>
+    <section class="showcase active">
+      <header>
+        <h1 class="logo">Gs04_TravelMap</h1>
+        <div class="toggle"></div>
+      </header>
 
-    <div id="ytPlayerWrap">
-      <div
-        id="ytPlayer"
-        data-property="{
-            videoURL: 'https://www.youtube.com/embed/nZzdleKLVm8?si=7IdWhAv3nP7q2nkx',
-            containment: '#ytPlayerWrap', //動画の位置(親要素)
-            autoPlay: true, //自動再生
-            loop: 1, //ループ再生
-            mute: true, //
-            startAt: 0, //動画の再生位置
-            showControls: false, //コントロールの非表示
-            showYTLogo: false //youtubeのロゴ等を非表示
-        }"
-      ></div>
-    </div>
+      <video src="./img/River.mp4" autoplay loop muted></video>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="./js/jquery.mb.YTPlayer.min.js"></script>
-    <script src="./js/myjs.js"></script>
+      <div class="overlay"></div>
+
+      <div class="text">
+        <h2>Travel Map</h2>
+        <h3>Explorer Something New</h3>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nam
+          mollitia quo alias dolor velit.
+        </p>
+
+        <div class="place-input">
+          <input
+            id="place"
+            type="text"
+            placeholder="where did you visit?"
+            autocomplete="off"
+          />
+          <button id="submitbtn" type="submit">Submit</button>
+        </div>
+      </div>
+
+      <ul class="social">
+        <li>
+          <a href="#"
+            ><img src="./img/IG.png" width="50px" height="50px" alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="./img/X.png" width="50px" height="50px" alt=""
+          /></a>
+        </li>
+        <li><a href="#"></a></li>
+      </ul>
+    </section>
+
+    <div class="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Your destination</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
   </body>
 </html>
