@@ -1,0 +1,33 @@
+body {
+  width: 600px;
+  margin: auto;
+}
+
+.input-place {
+  display: flex;
+  justify-content: center;
+
+  margin: 20px;
+}
+
+#place {
+  width: 100%;
+  height: 50px;
+  border-radius: 15px;
+  border: 1px solid #6e695f;
+  padding-left: 20px;
+  font-size: 15px;
+  color: #6e695f;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#ytPlayerWrap {
+  position: relative;
+  height: 500px;
+  width: 100%;
+}
