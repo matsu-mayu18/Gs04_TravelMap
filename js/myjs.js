@@ -10,13 +10,12 @@ $("#submit").on("click", function () {
   localStorage.setItem(key, value);
 
   //追加
-  // const kore = `
-  // <li>
-  //   <p>${key}</p>
-  //   <p>${value}</p>
-  // </li>
-  // `;
-  // $("#list").append(kore);
+  const kore = `
+  <li>
+    <p>${value}</p>
+  </li>
+  `;
+  $("#list").append(kore);
 
   //submitボタンを押した後、input欄を空にする
   $("#input").val("");
@@ -28,9 +27,11 @@ for (let i = 0; i < localStorage.length; i++) {
   const value = localStorage.getItem(key);
   const html = `
   <li>
-    <p>${key}</p>
     <p>${value}</p>
   </li>
   `;
   $("#list").append(html);
+  console.log("added");
 }
+
+//submitを押したら飛行機が飛ぶ
